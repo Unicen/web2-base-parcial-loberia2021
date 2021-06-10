@@ -1,4 +1,4 @@
-# Parcial 12/06/2020
+# Parcial 12/06/2021
 
 ## Entrega
 La entrega del parcial es utilizando **el mismo repositorio git donde fue clonado este proyecto**. Incluso los archivos extras (adjuntos) se deben colocar dentro de la carpeta `adjuntos_parcial/` y subir al repositorio.
