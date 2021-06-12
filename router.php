@@ -1,6 +1,6 @@
 <?php
-//require_once 'controllers/example.controller.php';
-require_once 'controllers/Controller.php';
+
+require_once './controllers\Controller.php';
 
 // base url
 define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']) . '/');
@@ -19,9 +19,14 @@ $Controller = new Controller();
 // TABLA DE RUTEO
 switch ($parametros[0]) {
     case 'home':
-        ;
+        $Controller->home();
         break;
-
+    case 'formAlumno':
+        $Controller->displayFormAlumno();
+        break;
+    case 'formVehiculo':
+        $Controller->displayFormVehiculo();
+        break;
     default:
         echo "404";
         break;

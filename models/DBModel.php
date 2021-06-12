@@ -19,4 +19,8 @@ class DBModel {
         }
     }
 
+    public function getDB(){
+        return $this->db;
+    }
+
 }
