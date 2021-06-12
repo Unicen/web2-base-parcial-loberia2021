@@ -1,0 +1,9 @@
+3.  Servicios Web
+¿Qué servicios web pensaría que pueden ser útiles en este sistema? 
+De al menos dos ejemplos, defina los endpoints de cada uno y explique 
+brevemente cual es su función y porqué pueden ser útiles.
+
+Usaria apis Rest que podrian unirse a un sistema de reparacion de vehiculos
+entonces me devolverian cuando estan disponibles despues de la reparacion.
+Podría tener otro api para que los alumnos se registren con una cuenta
+de gmail y poder tener novedades de su aprobacion por correo.

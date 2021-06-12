@@ -1,14 +1,18 @@
 <?php
 
-class ExampleModel {
+class Modelo {
 
     private $db;
 
-    public function __construct() {
+    function __construct(){
+        $this->db = $this->create_connection();
+    }
+
+    public function create_connection() {
         $host = 'localhost';
         $userName = 'root';
         $password = '';
-        $database = 'db_tuerquita';
+        $database = 'db_indydrive';
 
         // 1. abro la conexión con MySQL 
         try {
@@ -17,6 +21,12 @@ class ExampleModel {
         } catch (Exception $e) {
             var_dump($e);
         }
+
+        return $db;
+    }
+
+    public function getDb(){
+        return $this->db;
     }
 
 }
