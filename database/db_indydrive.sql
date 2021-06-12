@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-06-2021 a las 03:46:26
--- Versión del servidor: 10.4.17-MariaDB
--- Versión de PHP: 8.0.0
+-- Tiempo de generación: 12-06-2021 a las 17:16:32
+-- Versión del servidor: 10.1.31-MariaDB
+-- Versión de PHP: 7.2.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -59,7 +60,7 @@ INSERT INTO `alumno` (`id`, `nombre`, `edad`, `telefono`, `aprobado`, `recursant
 
 CREATE TABLE `vehiculo` (
   `id` int(11) NOT NULL,
-  `nombre` varchar(50) NOT NULL,
+  `nombres` varchar(50) NOT NULL,
   `profesor_asignado` tinyint(1) NOT NULL,
   `funcionando` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -68,7 +69,7 @@ CREATE TABLE `vehiculo` (
 -- Volcado de datos para la tabla `vehiculo`
 --
 
-INSERT INTO `vehiculo` (`id`, `nombre`, `profesor_asignado`, `funcionando`) VALUES
+INSERT INTO `vehiculo` (`id`, `nombres`, `profesor_asignado`, `funcionando`) VALUES
 (1, 'V1', 1, 1),
 (2, 'V2', 0, 1),
 (3, 'V3', 1, 0),
