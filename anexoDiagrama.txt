@@ -1,0 +1,11 @@
+Para comenzar crearia una estructura MVC
+por cada tabla en la base de datos,
+la cuales serian 3 ALUMNO, VEHICULO y USUARIO.
+
+Por cada uno se crea tanto un controlador especifico
+como un modelo y una vista,
+siguiendo la estructura del diagrama.
+Cada modelo accederia a la base de datos y
+traeria lo pedido por el controlador.
+Cada vista se encargaria de mostrar la interfaz que el usuario/invitado
+desea acceder. 
