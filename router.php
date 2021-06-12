@@ -24,8 +24,14 @@ switch ($parametros[0]) {
     case 'formAlumno':
         $Controller->displayFormAlumno();
         break;
+    case 'cargaralumno':
+        $Controller->addAlumno();
+        break;
     case 'formVehiculo':
         $Controller->displayFormVehiculo();
+        break;
+    case 'cargarvehiculo':
+        $Controller->addVehiculo();
         break;
     default:
         echo "404";

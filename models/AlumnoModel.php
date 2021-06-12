@@ -18,15 +18,18 @@ class AlumnoModel extends DBModel
         return $query->fetch(PDO::FETCH_OBJ);
     }
 
-    function getMayorYAprobado(){
+    function getMayorYAprobado()
+    {
         $query = $this->getDb()->prepare('SELECT * FROM `alumno` WHERE edad > 25 && aprobado = true');
         $query->execute();
         return $query->fetchAll(PDO::FETCH_OBJ);
     }
 
-    function add($nombre,$edad,$telefono,$aprobado,$recursante,$vehiculo){
+    function add($nombre, $edad, $telefono, $aprobado, $recursante, $vehiculo)
+    {
         $query = $this->getDb()->prepare('INSERT INTO `alumno`(`nombre`, `edad`, `telefono`, `aprobado`, `recursante`, `id_vehiculo_fk`) VALUES (?,?,?,?,?,?)');
-        $query->execute([$nombre,$edad,$telefono,$aprobado,$recursante,$vehiculo]);
+        $query->execute([$nombre, $edad, $telefono, $aprobado, $recursante, $vehiculo]);
         return $query->fetch(PDO::FETCH_OBJ);
     }
+
 }

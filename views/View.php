@@ -28,8 +28,9 @@ class View
     {
         $this->getSmarty()->display('templates/formvehiculo.tpl');
     }
-    public function renderFormAlumno()
+    public function renderFormAlumno($vehiculos)
     {
+        $this->getSmarty()->assign('vehiculos', $vehiculos);
         $this->getSmarty()->display('templates/formalumno.tpl');
     }
 }
