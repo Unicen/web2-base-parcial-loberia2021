@@ -1,0 +1,40 @@
+												CONTROLADORES
+
+ControlaUsuarios: en esta parte estaria una instancia de modelousuario, modeloadmin, vistausuario y vistaadmin con las respectivas funciones que llaman a la asignacion de  vista de logueo, verificacion de  contraseña y usuario.
+
+ControlaProductos: en esta parte estaria estaria una instancia de modeloproducto,vistaproductos, modelodivision con sus respectivas funciones que llaman a la asignacion de vista de la lista de los productos filtrado por la division y su administracion (sea usuario normal o administrador).
+
+ControlaDivision: en esta parte estaria una instancia de modelodivision, visordivision, modelousuario, modeloadmin, modeloproducto con sus respectivas funciones que llaman a la asignacion de vista dependiendo si el usuario es admin o no, con sus respectivas asignaciones de vista para administrar las divisiones.
+
+												MODELOS
+
+Modelo:	 crea la conexion a la base de datos.
+
+ModeloProducto:  	aqui estarian todas las funciones relacionadas a los productos (recuperar la lista de productos en la base de datos, buscar un/os producto/s en especifico por medio de uno de sus parametros (nombre, cantidad, importado, precio) o por su division, agregar algun producto,  aparte estarian las funciones administrativas para modificar cualquier producto si el usuario es administrador.  listar productos nuevos creados por un usuario.
+ 
+ModeloDivision: 	aqui estarian las funciones relacionadas a las divisiones , recuperar de la base de datos sus nombres y sus faltantes, aparte de las funciones administrativas de un usuario administrador (modificar divisiones)
+
+ModeloUsuario: funcion para recuperar el usuario desde una consulta a la base de datos.
+
+ModeloAdmin: funcion para recuperar un usuario administrador desde una consulta a la base de datos.
+
+
+												VISTAS
+
+Vista: asignacion de la template base.
+
+VistaUsuario: asignacion de los templates de la pagina de logueo de usuario.
+
+VistaAdmin:  asignacion de los templates de la pagina de logueo de un usuario administrador.
+
+VisorProductos: aca estarian las funciones de asignacion de templates en:  formulario de busqueda de un/varios producto/s (por nombre, cantidad , importado, precio) o por division,  render de agregado de producto, render de funciones administrativas de un producto en especifico ( si el usuario es admin), funcion de render de producto/s.
+
+VisorDivisión: asignacion de templates de formulario de consulta de estado de divisiones (nombre y faltantes), render de templates.
+
+
+PUNTO 3
+
+RTA:  REST: para poder realizar consultas desde aplicaciones de celular o tablets, retornando los datos como JSON para facil manejo de los datos.
+
+
+
