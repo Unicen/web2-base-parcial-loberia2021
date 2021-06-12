@@ -1,6 +1,6 @@
 <?php
 
-class ExampleModel {
+class Model {
 
     private $db;
 
@@ -18,5 +18,4 @@ class ExampleModel {
             var_dump($e);
         }
     }
-
 }

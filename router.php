@@ -13,12 +13,37 @@
     $accion = $_GET['action']; 
     $parametros = explode('/', $accion);
 
+
+
+require_once('controllers/controller.php');
+require_once('controllers/controllerProductos.php');
+require_once('controllers/controllerDivision.php');
+
+$Controller = new Controller();
+$ControllerProductos = new ControllerProductos();
+$ControllerDivision = new ControllerDivision();
+
     // TABLA DE RUTEO
     switch ($parametros[0]) {
         case 'home': 
-            echo "home";
+            $ControllerProductos->showProductos();
         break;
-        
+        case 'agregarProducto':
+            $ControllerProductos->agregarProducto();
+            break;
+        case 'agregarDivision':
+            $ControllerDivision->nuevaDivision();
+            break;
+        case 'faltantes':
+            $ControllerDivision->verFaltantes();
+            break;
+        case 'importados':
+            $ControllerDivision->verImportados();
+             break;
+        case   '15productos'
+             $ControllerProductos->Masde15yMenosde15();
+        case   '10productos'
+             $ControllerProductos->stock10();
         default:  
             echo "404";
         break;
