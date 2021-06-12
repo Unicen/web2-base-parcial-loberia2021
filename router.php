@@ -1,5 +1,7 @@
 <?php
-    //require_once 'controllers/example.controller.php';
+    require_once 'controllers/division.controller.php';
+    require_once 'controllers/producto.controller.php';
+    require_once 'controllers/division.controller.php';
 
     // base url
     define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
@@ -16,9 +18,17 @@
     // TABLA DE RUTEO
     switch ($parametros[0]) {
         case 'home': 
-            echo "home";
+            $DivisionController = new DivisionController();
+            $DivisionController->divisiones();
         break;
-        
+        case 'admin': 
+            $DivisionController = new DivisionController();
+            $DivisionController->formularioAgregar();
+        break;
+        case 'agregar': 
+            $DivisionController = new DivisionController();
+            $DivisionController->agregar();
+        break;
         default:  
             echo "404";
         break;

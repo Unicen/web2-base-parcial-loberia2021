@@ -1,0 +1,28 @@
+1) Falta la tabla de usuarios en la base datos para poder
+ hacer todo lo relacionado al ABM y poder registrarse y logearse 
+en la pagina.
+
+3) 
+
+-Podria ser util para cuando un usuario quiera acceder a todos
+los productos por ejemplo de una marca en especifico
+
+a traves de un metodo GET el router de la API va a mirar el recurso,
+los parametros y cual fue el metodo utilizado.
+
+endpoint: tuerquita.com.ar/api/producto/marca
+
+URL: producto/nombre, VERBO: GET, CONTROLLER: ApiProductoController
+METODO: obtenerProductoPorMarca
+
+
+-Tambien podria ser util un servicio web para que el usuarix 
+pueda dar una reseña a cada producto.
+
+a traves de un metodo POST el router de la API va a mirar el recurso,
+los parametros y cual fue el metodo utilizado.
+
+endpoint: tuerquita.com/api/resena/mensaje
+
+URL: resena/mensaje, VERBO: POST, CONTROLLER: ApiResenaController
+METODO: publicarResena

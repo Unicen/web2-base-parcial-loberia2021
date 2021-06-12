@@ -1,6 +1,6 @@
 <?php
 
-class ExampleModel {
+class Model {
 
     private $db;
 
@@ -17,6 +17,10 @@ class ExampleModel {
         } catch (Exception $e) {
             var_dump($e);
         }
+    }
+
+    public function getDb() {
+        return $this->db;
     }
 
 }
