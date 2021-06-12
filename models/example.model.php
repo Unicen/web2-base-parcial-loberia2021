@@ -5,7 +5,7 @@ class ExampleModel {
     private $db;
 
     public function __construct() {
-        $host = 'localhost';
+        $host = 'localhost:3308';
         $userName = 'root';
         $password = '';
         $database = 'db_tuerquita';
@@ -17,6 +17,10 @@ class ExampleModel {
         } catch (Exception $e) {
             var_dump($e);
         }
+    }
+
+    public function getDb() {
+        return $this->db;
     }
 
 }
