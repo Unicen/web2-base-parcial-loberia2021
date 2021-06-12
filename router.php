@@ -1,26 +1,28 @@
 <?php
-    //require_once 'controllers/example.controller.php';
+//require_once 'controllers/example.controller.php';
+require_once 'controllers/Controller.php';
 
-    // base url
-    define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
+// base url
+define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']) . '/');
 
-    // define una acción por defecto
-    if (empty($_GET['action'])) {
-        $_GET['action'] = 'home';
-    } 
+// define una acción por defecto
+if (empty($_GET['action'])) {
+    $_GET['action'] = 'home';
+}
 
-    // toma la acción que viene del usuario y parsea los parámetros
-    $accion = $_GET['action']; 
-    $parametros = explode('/', $accion);
+// toma la acción que viene del usuario y parsea los parámetros
+$accion = $_GET['action'];
+$parametros = explode('/', $accion);
 
-    // TABLA DE RUTEO
-    switch ($parametros[0]) {
-        case 'home': 
-            echo "home";
+$Controller = new Controller();
+
+// TABLA DE RUTEO
+switch ($parametros[0]) {
+    case 'home':
+        ;
         break;
-        
-        default:  
-            echo "404";
+
+    default:
+        echo "404";
         break;
-        
-    }
+}
