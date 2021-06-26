@@ -1,0 +1,64 @@
+PTO 1:
+BD :
+
+tendria tablas de productos, division y usuarios
+
+tabla productos;
+
+id
+nombre
+marca
+cantidad
+importado
+precio
+id_division_fk
+
+tabla division
+id
+nombre
+faltantes
+
+tabla usuarios
+id
+nombre
+admin
+
+MVC:
+producto:
+
+controladorproducto: une los datos de modeloproducto para ser mostrado por vistaproducto.
+vistaproducto: muestra los datos. 
+modeloproducto:
+	borrarproducto() borra un producto
+	administrarproducto() funcion para modificar datos de un producto en especifico en la base de datos
+	buscarproducto(filtro) filtra un producto por medio de una variable enviada por parametro.
+	agregarproducto(datos) agrega un producto.
+	editarproducto()
+	borrarproducto()
+	agregarproducto()
+
+Division:
+controladordivision:une los datos de modelodivision para ser mostrado por vistadivision
+vistadivision:muestra los datos.
+modelodivision:
+	determinadivision(filtro): muestra el estado de la division.
+	muestraproductio(filtro): filtro de producto.
+	editardivision(division): edita los datos de una division
+	agregardivision()
+	borrardivision()
+
+usuario:
+controlausuario: une los datos de modelousuario para ser mostrado por vistausuario
+vistausuario: muestra los datos
+modelousuario:
+	crearusuario()
+	logearusuario()
+	borrarusuario()
+PTO 3:
+whatsapp: se usaria para pedir productos  y consultar horarios de atencion al cliente
+haria una api para conectarme con el proveedor de los productos y revisar stock para agilizar el resbastecimiento de productos
+haria una api para una pasarela de pago con mercadopago para pagar a los proveedores.
+
+pto 4:
+haria una tabla nueva llamada compras donde almacenaria la fecha, una lista de productos, el precio final.
+agregaria el precio del producto, el stock en la tabla de productos y con esos datos enlazados a la tabla compras y asi poder emitir una factura de cada compra

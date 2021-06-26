@@ -1,6 +1,6 @@
 <?php
 
-class ExampleModel {
+class Modelo {
 
     private $db;
 
@@ -10,7 +10,6 @@ class ExampleModel {
         $password = '';
         $database = 'db_tuerquita';
 
-        // 1. abro la conexión con MySQL 
         try {
             $this->db = new PDO("mysql:host=$host;dbname=$database;charset=utf8", $userName, $password);            
             $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
