@@ -1,6 +1,6 @@
 <?php
-    //require_once 'controllers/example.controller.php';
-
+    require_once 'controllers/publicController.php';
+    require_once 'controllers/adminController.php';
     // base url
     define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
 
@@ -13,10 +13,12 @@
     $accion = $_GET['action']; 
     $parametros = explode('/', $accion);
 
+    $PublicController = new PublicController();
+    $AdminController = new AdminController();
     // TABLA DE RUTEO
     switch ($parametros[0]) {
         case 'home': 
-            echo "home";
+            $PublicController->ShowHome();
         break;
         
         default:  
